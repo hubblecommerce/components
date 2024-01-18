@@ -1,0 +1,32 @@
+main {
+    @apply prose container w-full max-w-full;
+
+    h1, h2, h3, h4, h5, h6 {
+        a {
+            @apply link-hover relative;
+
+            &:hover:before {
+                content: '#';
+                @apply absolute right-full mr-2 font-normal text-neutral;
+            }
+        }
+    }
+}
+
+.drawer-toggle:checked ~ .drawer-side > .drawer-overlay {
+    @apply bg-gray-900/50 backdrop-blur backdrop-filter opacity-100;
+}
+
+
+pre code .line{
+    display: block;
+    min-height: 1rem;
+}
+
+pre {
+    @apply border;
+}
+
+.prose-code-header ~ pre {
+    @apply mt-0 rounded-t-none;
+}
